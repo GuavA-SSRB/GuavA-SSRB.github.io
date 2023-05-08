@@ -1190,6 +1190,13 @@ section {
 .team .member .member-img {
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+}
+
+.member-img img {
+  align-self: center;
 }
 
 .team .member .social {

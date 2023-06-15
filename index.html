@@ -50,17 +50,14 @@
       </div>
 
       <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Profile</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+        <ul class="getstarted scrollto">
+          <li><a class="nav-link scrollto active" href="#">HOME</a></li>
+          <li><a class="nav-link scrollto" href="#about">ABOUT</a></li>
+          <li class="dropdown"><a href="#team"><span>TALENT</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+              <li><a href="#team">TALENT PROFILE</a></li>
+              <!--
+              <li class="dropdown"><a href="#team"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="#">Deep Drop Down 1</a></li>
                   <li><a href="#">Deep Drop Down 2</a></li>
@@ -69,13 +66,19 @@
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
               </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              -->
+              <li><a href="#testimonials">GREETING</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+          <li><a class="nav-link scrollto" href="#services">ACTIVITIES</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">GALLERY</a></li>
+          <li><a class="nav-link scrollto " href="#music">MUSIC</a></li>
+          <li><a class="nav-link scrollto " href="#video">VIDEO</a></li>
+          <!--
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          -->
+          <li><a class="nav-link scrollto" href="#contact">CONTACT</a></li>
+          <li><a class="getstarted scrollto" href="#about">GET STARTED</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -90,24 +93,52 @@
 
   <div class="videobox">
     <!-- Practice: Youtube -->
-    <iframe src="https://www.youtube.com/embed/9ibbMZYjSNU" title="YouTube video player" frameborder="0" allowfullscreen="true">
+    <iframe id="youtube-video" src="https://www.youtube.com/embed/9ibbMZYjSNU" title="YouTube video player" frameborder="0" allowfullscreen="true">
     </iframe>
   </div>
+
+  <!-- ======= BGM ======= -->
+  <audio id="background-audio" src="assets/bgm.mp3" autoplay loop controls></audio>
+
+  <div id="dialog-overlay">
+    <div id="dialog-box">
+      <h2>Background Music Confirmation</h2>
+      <h5>Do you want to enable background music?</h5>
+      <button id="confirm-button">Yes</button>
+      <button id="cancel-button">No</button>
+    </div>
+  </div>
+
+  <!-- 以下為iframe觸發BGM暫停功能(算了)
+  <div id="dialog-overlay-2">
+    <div id="dialog-box">
+      <h2>Background Music Control</h2>
+      <h5>Do you want to pause background music?</h5>
+      <button id="play-button">Play</button>
+      <button id="pause-button">Pause</button>
+    </div>
+  </div>
+  -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container"> <!-- Try to change 網格(col-lg) -->
       <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">Grow your business with Vesperr</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
+        <div class="col-lg-5 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Hololive 5th Gen. -</h1>
+          <h1 data-aos="fade-up" style="white-space: nowrap; color: #f18d00;">
+            Ne<span style="color: #e4007f;">P</span><span style="color: #0080cc;">o</span><span style="color: #7dcef4;">La</span><span style="color: #727171;">Bo</span>
+          </h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">The best Vtuber idol group in the world :D</h2>
+          <!--
           <div data-aos="fade-up" data-aos-delay="800">
             <a href="#about" class="btn-get-started scrollto">Get Started</a>
           </div>
+          -->
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+        <div class="col-lg-7 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+          <img src="https://pbs.twimg.com/media/Er2jeGiVcAECAeJ?format=png&name=large" class="img-fluid animated" alt="nepolabo-logo">
         </div>
       </div>
     </div>
@@ -116,34 +147,34 @@
 
   <main id="main">
 
-    <!-- ======= Clients Section ======= -->
+    <!-- ======= Brand(Clients) Section ======= -->
     <section id="clients" class="clients clients">
       <div class="container">
 
         <div class="row">
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="" data-aos="zoom-in">
+            <img src="https://hololivepro.com/wp-content/themes/hololive_production/images/top_logo_hololive.svg" class="img-fluid" alt="hololive" data-aos="zoom-in">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+            <img src="https://hololivepro.com/wp-content/themes/hololive_production/images/top_logo_hololive_id.svg" class="img-fluid" alt="hololive INDONESIA" data-aos="zoom-in" data-aos-delay="100">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
+            <img src="https://hololivepro.com/wp-content/themes/hololive_production/images/top_logo_hololive_en.svg" class="img-fluid" alt="hololive ENGLISH" data-aos="zoom-in" data-aos-delay="200">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300">
+            <img src="https://hololivepro.com/wp-content/uploads/2023/03/hololive_alt.png" class="attachment-medium size-medium wp-post-image" class="img-fluid" alt="hololive alternative" data-aos="zoom-in" data-aos-delay="300">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400">
+            <img src="https://hololivepro.com/wp-content/uploads/2023/03/holoearth.png" class="img-fluid" alt="hololive earth" data-aos="zoom-in" data-aos-delay="400">
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+            <img src="https://hololivepro.com/wp-content/uploads/2023/03/hololy_hp.png" class="img-fluid" alt="hololy" data-aos="zoom-in" data-aos-delay="500">
           </div>
 
         </div>
@@ -162,29 +193,267 @@
         <div class="row content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              With over 50,000,000 fans across all their channels, VTuber group hololive is the all-female talent group that belongs to the VTuber agency hololive production.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> The most famous Vtuber group nowadays</li>
+              <li><i class="ri-check-double-line"></i> Lots of million subscirbes talents on YouTube</li>
+              <li><i class="ri-check-double-line"></i> Worldwide renowned idol enterprise</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+               The fifth generation of Hololive, "NePoLaBo", is a currently trending group of four members with diverse and vibrant personalities.
+               The members include "Half-Elf - Yukihana Lamy", "Alien Girl - Momosuzu Nene", "White Lioness - Shishiro Botan" and "Fennec Fox - Omaru Polka".
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <a href="#team" class="btn-learn-more">Learn More</a>
           </div>
         </div>
 
       </div>
     </section><!-- End About Us Section -->
 
-    <!-- ======= Counts Section ======= -->
+    <!-- ======= Profile(Team) Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container"> <!-- change "team" to "profile" later -->
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Talent Profile</h2>
+          <p>Members of Hololive 5th Gen.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="https://hololive.hololivepro.com/wp-content/uploads/2020/06/Yukihana-Lamy_pr-img_01.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/yukihanalamy" target="_blank"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.youtube.com/@YukihanaLamy" target="_blank"><i class="bi bi-youtube"></i></a>
+                  <a href="https://www.twitch.tv/yukihanalamy_hololive" target="_blank"><i class="bi bi-twitch"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>雪花ラミィ☃️</h4>
+                <span>酒大好き酒豪雪女</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="https://hololive.hololivepro.com/wp-content/uploads/2020/06/Momosuzu-Nene_pr-img_01.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/momosuzunene" target="_blank"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.youtube.com/@MomosuzuNene" target="_blank"><i class="bi bi-youtube"></i></a>
+                  <a href="https://www.twitch.tv/momosuzunene_hololive?lang=zh-tw" target="_blank"><i class="bi bi-twitch"></i></a>
+                  <a href="https://www.tiktok.com/@momosuzunene_hololive" target="_blank"><i class="bi bi-tiktok"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>桃鈴ねね🍑🥟</h4>
+                <span>元気いっぱいアザラシ</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="https://hololive.hololivepro.com/wp-content/uploads/2020/07/Shishiro-Botan_pr-img_01.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/shishirobotan" target="_blank"><i class="bi bi-twitter" target="_blank"></i></a>
+                  <a href="https://www.youtube.com/@ShishiroBotan" target="_blank"><i class="bi bi-youtube"></i></a>
+                  <a href="https://www.twitch.tv/shishirobotan_hololive" target="_blank"><i class="bi bi-twitch"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>獅白ぼたん♌</h4>
+                <span>気ままなホワイトライオン</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="https://hololive.hololivepro.com/wp-content/uploads/2023/04/Omaru-Polka_pr-img_01.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/omarupolka" target="_blank"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.youtube.com/@OmaruPolka" target="_blank"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>尾丸ポルカ🎪</h4>
+                <span>低気圧負け組フェネック</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Greeting(Testimonials) Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Greeting</h2>
+          <p>Unique catching phrases they interact with the audience</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/lamy.jpg" class="testimonial-img" alt="lamy">
+                  <h3>Yukihana Lamy</h3>
+                  <h4>Cutest Alcoholic</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    こんらみ（です）！
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    おつらみ（でした）！
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                  <!--
+                  <div class="extra-image">
+                    <img src="assets/img/testimonials/lamy.jpg" alt="Small Image">
+                  </div>
+                  -->
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/nene.jpg" class="testimonial-img" alt="nene">
+                  <h3>Momosuzu Nene</h3>
+                  <h4>Positive Idol</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    こんねね～！
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    またねね～！
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/botan.jpg" class="testimonial-img" alt="botan">
+                  <h3>Shishiro Botan</h3>
+                  <h4>Apex Predator</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    ららーいおん！
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                  <p>  
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    バイバイ―
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/poruka.jpg" class="testimonial-img" alt="poruka">
+                  <h3>Omaru Polka</h3>
+                  <h4>No.1 Circus Leader</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    ポルカおるか？おるよ！
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                  <p>  
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    おつぽるー
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+
+        </div>
+
+        <div class="swiper-pagination">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Activities(Services) Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Activities</h2>
+          <p>Main activities they are engaged in</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bi bi-controller"></i></div>
+              <h4 class="title"><a href="">Live Streaming</a></h4>
+              <p class="description">Show out excellent game player skills</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bi bi-music-note-beamed"></i></div>
+              <h4 class="title"><a href="">Music Concert</a></h4>
+              <p class="description">Conduct brilliant LIVE performance</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bi bi-emoji-laughing"></i></div>
+              <h4 class="title"><a href="">Variety Show</a></h4>
+              <p class="description">Host various programs as an entertainer</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bi bi-collection-play-fill"></i></div>
+              <h4 class="title"><a href="">Multimedia Project</a></h4>
+              <p class="description">Voice acting, comics, animation, games... all kinds of media genre</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Counts Section ======= 
     <section id="counts" class="counts">
       <div class="container">
 
@@ -228,61 +497,14 @@
                   </div>
                 </div>
               </div>
-            </div><!-- End .content-->
+            </div> End .content
           </div>
         </div>
 
       </div>
-    </section><!-- End Counts Section -->
+    </section> End Counts Section -->
 
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fug</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= More Services Section ======= -->
+    <!-- ======= More Services Section ======= 
     <section id="more-services" class="more-services">
       <div class="container">
 
@@ -327,9 +549,9 @@
         </div>
 
       </div>
-    </section><!-- End More Services Section -->
+    </section> End More Services Section -->
 
-    <!-- ======= Features Section ======= -->
+    <!-- ======= Features Section ======= 
     <section id="features" class="features">
       <div class="container">
 
@@ -414,118 +636,25 @@
         </div>
 
       </div>
-    </section><!-- End Features Section -->
+    </section> End Features Section -->
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Testimonials</h2>
-          <p>Magnam dolores commodi suscipit eum quidem consectetur velit</p>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Portfolio Section ======= -->
+    <!-- ======= Gallery(Portfolio) Section ======= -->
     <section id="portfolio" class="portfolio">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+          <h2>Gallery</h2>
+          <p>Some beautiful pictures</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">Lamy</li>
+              <li data-filter=".filter-card">Nene</li>
+              <li data-filter=".filter-web">Botan</li>
+              <li data-filter=".filter-new">Polka</li>
             </ul>
           </div>
         </div>
@@ -534,27 +663,27 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/lamy-1.jpg" class="img-fluid" alt="lamy-1">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>Lamy 1</h4>
+                <p>Debut</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/lamy-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/83603397" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/lamy-2-1.jpg" class="img-fluid" alt="lamy-2-1">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Lamy 2</h4>
+                <p>2nd Anniversary</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/lamy-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/104286388" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -562,13 +691,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/lamy-3-1.jpg" class="img-fluid" alt="lamy-3-1">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
+                <h4>Lamy 3</h4>
+                <p>Valentine's Day</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/lamy-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/96169991" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -576,13 +705,41 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/nene-1-1.jpg" class="img-fluid" alt="nene-1-1">
               <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
+                <h4>Nene 1</h4>
+                <p>Debut</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/nene-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/83514078" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/nene-2.jpg" class="img-fluid" alt="nene-2">
+              <div class="portfolio-info">
+                <h4>Nene 2</h4>
+                <p>New Year Outfit</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/nene-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://twitter.com/wanwangomigomi/status/1344916270697902080" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/nene-3-1.jpg" class="img-fluid" alt="nene-3-1">
+              <div class="portfolio-info">
+                <h4>Nene 3</h4>
+                <p>New Outfit</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/nene-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/92677498" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -590,55 +747,13 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/botan-1-1.png" class="img-fluid" alt="botan-1-1">
               <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
+                <h4>Botan 1</h4>
+                <p>Debut</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/botan-1.png" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://twitter.com/ttomarii/status/1291264414553792514" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -646,13 +761,69 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/botan-2-1.jpg" class="img-fluid" alt="botan-2-1">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Botan 2</h4>
+                <p>2nd Anniversary</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/botan-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/99739337" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/botan-3-1.jpg" class="img-fluid" alt="botan-3-1">
+              <div class="portfolio-info">
+                <h4>Botan 3</h4>
+                <p>2nd Birthday</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/botan-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://twitter.com/ttomarii/status/1551894695139508225" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-new">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/poruka-1-1.jpg" class="img-fluid" alt="poruka-1">
+              <div class="portfolio-info">
+                <h4>Polka 1</h4>
+                <p>Debut</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/poruka-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/83495018" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-new">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/poruka-2-1.jpg" class="img-fluid" alt="poruka-2-1">
+              <div class="portfolio-info">
+                <h4>Polka 2</h4>
+                <p>Oceanside</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/poruka-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/99834121" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-new">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/poruka-3.jpg" class="img-fluid" alt="poruka-3">
+              <div class="portfolio-info">
+                <h4>Polka 3</h4>
+                <p>1 million subscribes</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/poruka-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox"><i class="bx bx-plus"></i></a>
+                  <a href="https://www.pixiv.net/artworks/100221057" title="More Details" target="_blank"><i class="bx bx-link"></i></a>
                 </div>
               </div>
             </div>
@@ -663,95 +834,239 @@
       </div>
     </section><!-- End Portfolio Section -->
 
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container"> <!-- change "team" to "profile" later -->
-
+    <!-- ======= Music Section ======= -->
+    <section id="music" class="music">
+      <div class="container">
         <div class="section-title" data-aos="fade-up">
-          <h2>Profile</h2>
-          <p>Members of Hololive 5th Gen.</p>
+          <h2>Music</h2>
+          <p>Enjoy their songs</p>
         </div>
 
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="https://hololive.hololivepro.com/wp-content/uploads/2020/06/Yukihana-Lamy_pr-img_01.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://twitter.com/yukihanalamy" target="_blank"><i class="bi bi-twitter"></i></a>
-                  <a href="" target="_blank"><i class="bi bi-youtube"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+        <div class="music-content" data-aos="fade-up" data-aos-delay="100">
+          <div class="music-item">
+            <div class="music-wrap">
+              <div class="music-thumbnail">
+                <img src="assets/img/music/1.jpg" alt="1">
               </div>
-              <div class="member-info">
-                <h4>雪花ラミィ</h4>
-                <span>酒大好き酒豪雪女</span>
+              <div class="music-details">
+                <h3>明日への境界線</h3>
+                <p>Artist: Yukihana Lamy</p>
+                <a href="https://www.youtube.com/watch?v=ULtGHb83pTI" class="btn btn-primary" target="_blank">Listen Now</a>
               </div>
             </div>
-          </div>
+          </div><!-- End music item -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="https://hololive.hololivepro.com/wp-content/uploads/2020/06/Momosuzu-Nene_pr-img_01.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://twitter.com/momosuzunene" target="_blank"><i class="bi bi-twitter"></i></a>
-                  <a href="" target="_blank"><i class="bi bi-youtube"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+          <div class="music-item">
+            <div class="music-wrap">
+              <div class="music-thumbnail">
+                <img src="assets/img/music/2.jpg" alt="2">
               </div>
-              <div class="member-info">
-                <h4>桃鈴ねね</h4>
-                <span>元気いっぱいアザラシ</span>
+              <div class="music-details">
+                <h3>ねねねねねねねね!大爆走</h3>
+                <p>Artist: Momosuzu Nene</p>
+                <a href="https://www.youtube.com/watch?v=7P5oggg7aSE" class="btn btn-primary" target="_blank">Listen Now</a>
               </div>
             </div>
-          </div>
+          </div><!-- End music item -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="https://hololive.hololivepro.com/wp-content/uploads/2020/07/Shishiro-Botan_pr-img_01.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://twitter.com/shishirobotan" target="_blank"><i class="bi bi-twitter" target="_blank"></i></a>
-                  <a href="" target="_blank"><i class="bi bi-youtube"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+          <div class="music-item">
+            <div class="music-wrap">
+              <div class="music-thumbnail">
+                <img src="assets/img/music/3.jpg" alt="3">
               </div>
-              <div class="member-info">
-                <h4>獅白ぼたん</h4>
-                <span>気ままなホワイトライオン</span>
+              <div class="music-details">
+                <h3>Lioness’ Pride</h3>
+                <p>Artist: Shishiro Botan</p>
+                <a href="https://www.youtube.com/watch?v=npVP58NvdQ8" class="btn btn-primary" target="_blank">Listen Now</a>
               </div>
             </div>
-          </div>
+          </div><!-- End music item -->
 
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="https://hololive.hololivepro.com/wp-content/uploads/2023/04/Omaru-Polka_pr-img_01.png" class="img-fluid" alt="">
-                <div class="social">
-                  <a href="https://twitter.com/omarupolka" target="_blank"><i class="bi bi-twitter"></i></a>
-                  <a href="" target="_blank"><i class="bi bi-youtube"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+          <div class="music-item">
+            <div class="music-wrap">
+              <div class="music-thumbnail">
+                <img src="assets/img/music/4.jpg" alt="4">
               </div>
-              <div class="member-info">
-                <h4>尾丸ポルカ</h4>
-                <span>低気圧負け組フェネック</span>
+              <div class="music-details">
+                <h3>HOLOGRAM CIRCUS</h3>
+                <p>Artist: Omaru Polka</p>
+                <a href="https://www.youtube.com/watch?v=LQ_eazT56FA" class="btn btn-primary" target="_blank">Listen Now</a>
               </div>
             </div>
-          </div>
+          </div><!-- End music item -->
 
+          <div class="music-item">
+            <div class="music-wrap">
+              <div class="music-thumbnail">
+                <img src="assets/img/music/blessing.jpg" alt="blessing">
+              </div>
+              <div class="music-details">
+                <h3>Blessing</h3>
+                <p>Artist: NePoLaBo</p>
+                <a href="https://www.youtube.com/watch?v=cYfUaHljuKg" class="btn btn-primary" target="_blank">Listen Now</a>
+              </div>
+            </div>
+          </div><!-- End music item -->
+
+          <div class="music-item">
+            <div class="music-wrap">
+              <div class="music-thumbnail">
+                <img src="assets/img/music/Mr. Music.jpg" alt="Mr. Music">
+              </div>
+              <div class="music-details">
+                <h3>Mr. Music</h3>
+                <p>Artist: NePoLaBo</p>
+                <a href="https://www.youtube.com/watch?v=063INZy-ZtM" class="btn btn-primary" target="_blank">Listen Now</a>
+              </div>
+            </div>
+          </div><!-- End music item -->
+
+          <div class="music-item">
+            <div class="music-wrap">
+              <div class="music-thumbnail">
+                <img src="assets/img/music/park.jpg" alt="park">
+              </div>
+              <div class="music-details">
+                <h3>ようこそジャパリパークへ</h3>
+                <p>Artist: NePoLaBo</p>
+                <a href="https://www.youtube.com/watch?v=mO0s9WTI-eU" class="btn btn-primary" target="_blank">Listen Now</a>
+              </div>
+            </div>
+          </div><!-- End music item -->
+
+          <div class="music-item">
+            <div class="music-wrap">
+              <div class="music-thumbnail">
+                <img src="assets/img/music/sakura skip.jpg" alt="sakura skip">
+              </div>
+              <div class="music-details">
+                <h3>SAKURAスキップ</h3>
+                <p>Artist: NePoLaBo</p>
+                <a href="https://www.youtube.com/watch?v=gRqv6tQZ3po" class="btn btn-primary" target="_blank">Listen Now</a>
+              </div>
+            </div>
+          </div><!-- End music item -->
         </div>
-
       </div>
-    </section><!-- End Team Section -->
+    </section><!-- End Music Section -->
 
-    <!-- ======= Pricing Section ======= -->
+    <!-- ======= Video Section ======= -->
+    <section id="video" class="video">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Video</h2>
+          <p>Watch their videos</p>
+        </div>
+
+        <div class="video-content" data-aos="fade-up" data-aos-delay="100">
+          <div class="video-item">
+            <div class="video-wrap">
+              <div class="video-thumbnail">
+                <img src="assets/img/video/lamy.jpg" alt="lamy">
+              </div>
+              <div class="video-details">
+                <h3>白熊VSお嬢様</h3>
+                <p>Main: Yukihana Lamy</p>
+                <a href="https://www.youtube.com/watch?v=lz08zMLUtEc&list=PL1NeGg1woXqngQytLzL8lJJLYwmzk1Wuq&index=120" class="btn btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+          </div><!-- End video item -->
+
+          <div class="video-item">
+            <div class="video-wrap">
+              <div class="video-thumbnail">
+                <img src="assets/img/video/nene.jpg" alt="nene">
+              </div>
+              <div class="video-details">
+                <h3>春はあげぽよ〜＾＾v</h3>
+                <p>Main: Momosuzu Nene</p>
+                <a href="https://www.youtube.com/watch?v=IVnnd0lNRtM" class="btn btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+          </div><!-- End video item -->
+
+          <div class="video-item">
+            <div class="video-wrap">
+              <div class="video-thumbnail">
+                <img src="assets/img/video/botan.jpg" alt="botan">
+              </div>
+              <div class="video-details">
+                <h3>三輪車に乗る大人たち</h3>
+                <p>Main: Shishiro Botan</p>
+                <a href="https://www.youtube.com/watch?v=Acw8qh9lOGU&list=PL1NeGg1woXqngQytLzL8lJJLYwmzk1Wuq&index=120" class="btn btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+          </div><!-- End video item -->
+
+          <div class="video-item">
+            <div class="video-wrap">
+              <div class="video-thumbnail">
+                <img src="assets/img/video/poruka.jpg" alt="poruka">
+              </div>
+              <div class="video-details">
+                <h3>猫になる方法</h3>
+                <p>Main: Omaru Polka</p>
+                <a href="https://www.youtube.com/watch?v=uhbGec_6mfQ&list=PL1NeGg1woXqngQytLzL8lJJLYwmzk1Wuq&index=121" class="btn btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+          </div><!-- End video item -->
+
+          <div class="video-item">
+            <div class="video-wrap">
+              <div class="video-thumbnail">
+                <img src="assets/img/video/1.jpg" alt="1">
+              </div>
+              <div class="video-details">
+                <h3>め、めんどくせ〜！</h3>
+                <p>Main: NePoLaBo</p>
+                <a href="https://www.youtube.com/watch?v=6Li1JW3URWQ" class="btn btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+          </div><!-- End video item -->
+
+          <div class="video-item">
+            <div class="video-wrap">
+              <div class="video-thumbnail">
+                <img src="assets/img/video/2.jpg" alt="2">
+              </div>
+              <div class="video-details">
+                <h3>ついに警察の出番が...</h3>
+                <p>Main: NeneLamy</p>
+                <a href="https://www.youtube.com/watch?v=gDRqKpsO8xg&list=PL1NeGg1woXqngQytLzL8lJJLYwmzk1Wuq&index=101" class="btn btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+          </div><!-- End video item -->
+
+          <div class="video-item">
+            <div class="video-wrap">
+              <div class="video-thumbnail">
+                <img src="assets/img/video/3.jpg" alt="3">
+              </div>
+              <div class="video-details">
+                <h3>最速への憧れ</h3>
+                <p>Main: ShishiNene</p>
+                <a href="https://www.youtube.com/watch?v=ZWTuQnb9wq0&list=PL1NeGg1woXqngQytLzL8lJJLYwmzk1Wuq&index=102" class="btn btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+          </div><!-- End video item -->
+
+          <div class="video-item">
+            <div class="video-wrap">
+              <div class="video-thumbnail">
+                <img src="assets/img/video/4.jpg" alt="4">
+              </div>
+              <div class="video-details">
+                <h3>崖から突き落とすタイプ教育</h3>
+                <p>Main: ShishiLamyPoru</p>
+                <a href="https://www.youtube.com/watch?v=fBpnJQdDlog&list=PL1NeGg1woXqngQytLzL8lJJLYwmzk1Wuq&index=64" class="btn btn-primary" target="_blank">Watch Now</a>
+              </div>
+            </div>
+          </div><!-- End video item -->
+        </div>
+      </div>
+    </section><!-- End Video Section -->
+
+    <!-- ======= Pricing Section ======= 
     <section id="pricing" class="pricing">
       <div class="container">
 
@@ -816,9 +1131,9 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section> End Pricing Section -->
 
-    <!-- ======= F.A.Q Section ======= -->
+    <!-- ======= F.A.Q Section ======= 
     <section id="faq" class="faq">
       <div class="container">
 
@@ -836,7 +1151,7 @@
               Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
             </p>
           </div>
-        </div><!-- End F.A.Q Item-->
+        </div> End F.A.Q Item
 
         <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-5">
@@ -848,7 +1163,7 @@
               Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim.
             </p>
           </div>
-        </div><!-- End F.A.Q Item-->
+        </div> End F.A.Q Item
 
         <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
           <div class="col-lg-5">
@@ -860,7 +1175,7 @@
               Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus.
             </p>
           </div>
-        </div><!-- End F.A.Q Item-->
+        </div> End F.A.Q Item
 
         <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
           <div class="col-lg-5">
@@ -872,7 +1187,7 @@
               Aperiam itaque sit optio et deleniti eos nihil quidem cumque. Voluptas dolorum accusantium sunt sit enim. Provident consequuntur quam aut reiciendis qui rerum dolorem sit odio. Repellat assumenda soluta sunt pariatur error doloribus fuga.
             </p>
           </div>
-        </div><!-- End F.A.Q Item-->
+        </div> End F.A.Q Item
 
         <div class="row faq-item d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="500">
           <div class="col-lg-5">
@@ -884,10 +1199,10 @@
               Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
             </p>
           </div>
-        </div><!-- End F.A.Q Item-->
+        </div> End F.A.Q Item
 
       </div>
-    </section><!-- End F.A.Q Section -->
+    </section> End F.A.Q Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -899,39 +1214,44 @@
 
         <div class="row">
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="contact-about">
-              <h3>Vesperr</h3>
-              <p>Cras fermentum odio eu feugiat. Justo eget magna fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+              <h3>Hololive Production</h3>
+              <p>Hololive is an idol (entertainer) production.</p>
               <div class="social-links">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="https://twitter.com/hololivetv" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.youtube.com/@hololive" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+                <a href="https://www.facebook.com/hololivetv" class="instagram" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/cover-corp" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
             <div class="info">
               <div>
                 <i class="ri-map-pin-line"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>〒173-0003
+                  東京都板橋区加賀1丁目6番1号
+                  ネットデポ新板橋
+                  カバー株式会社 係分
+                </p>
               </div>
 
               <div>
                 <i class="ri-mail-send-line"></i>
-                <p>info@example.com</p>
+                <p>hololive@gmail.com</p>
               </div>
 
               <div>
                 <i class="ri-phone-line"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>+81-8850006995</p>
               </div>
 
             </div>
           </div>
-
+          <iframe class="col-lg-12 col-md-12" data-aos="fade-up" data-aos-delay="300" src="https://docs.google.com/forms/d/e/1FAIpQLSdqKmT0_8qsLTSNe_bNs8CtYYWZuGcCZgD4N1cjyMPhP1Sejg/viewform?embedded=true" width="640" height="953" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+          <!-- 原本的填寫區塊
           <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
@@ -953,6 +1273,7 @@
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+            -->
           </div>
 
         </div>
@@ -968,6 +1289,9 @@
       <div class="row d-flex align-items-center">
         <div class="col-lg-6 text-lg-left text-center">
           <div class="copyright">
+            &copy; 2016 <strong>COVER Corp</strong>.
+          </div>
+          <div class="copyright">
             &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
           </div>
           <div class="credits">
@@ -980,7 +1304,7 @@
         </div>
         <div class="col-lg-6">
           <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="#intro" class="scrollto">Home</a>
+            <a href="#" class="scrollto">Home</a>
             <a href="#about" class="scrollto">About</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Use</a>

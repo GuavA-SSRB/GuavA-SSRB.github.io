@@ -293,27 +293,4 @@
     });
   });
 
-/*
-  // 以下為監聽iframe暫停BGM(算了)
-  var youtubeVideo = document.getElementById('youtube-video');
-  var backgroundAudio = document.getElementById('background-audio');
-  var existingDialogOverlay = document.getElementById('dialog-overlay-2');
-  var playButton = document.getElementById('play-button');
-  var pauseButton = document.getElementById('pause-button');
-
-  youtubeVideo.addEventListener('click', function() {
-    existingDialogOverlay.style.display = 'block'; // 顯示現有對話框
-  });
-
-  playButton.addEventListener('click', function() {
-    backgroundAudio.play(); // 播放背景音樂
-    existingDialogOverlay.style.display = 'none'; // 隱藏現有對話框
-  });
-
-  pauseButton.addEventListener('click', function() {
-    backgroundAudio.pause(); // 暫停背景音樂
-    existingDialogOverlay.style.display = 'none'; // 隱藏現有對話框
-  });
-*/
-
 })()

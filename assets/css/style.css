@@ -34,6 +34,48 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# BGM
+--------------------------------------------------------------*/
+audio {
+  display: none;
+}
+
+#dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#dialog-box {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#confirm-button, #cancel-button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#confirm-button:hover, #cancel-button:hover {
+  background-color: #0056b3;
+}
+
+/*--------------------------------------------------------------
 # Adjust Youtube iframe size
 --------------------------------------------------------------*/
 .videobox {
@@ -147,6 +189,15 @@ h6 {
   align-items: center;
 }
 
+.navbar ul.getstarted,
+.navbar ul.getstarted:focus {
+  padding: 8px 25px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #000;
+  background: #fff;
+}
+
 .navbar li {
   position: relative;
 }
@@ -178,8 +229,8 @@ h6 {
   color: #0000E3;
 }
 
-.navbar .getstarted,
-.navbar .getstarted:focus {
+.navbar a.getstarted,
+.navbar a.getstarted:focus {
   background: #0080FF;
   padding: 8px 25px;
   margin-left: 30px;
@@ -187,10 +238,10 @@ h6 {
   color: #fff;
 }
 
-.navbar .getstarted:hover,
-.navbar .getstarted:focus:hover {
+.navbar a.getstarted:hover,
+.navbar a.getstarted:focus:hover {
   color: #000;
-  background: #fff;
+  background: #7dcef4;
 }
 
 .navbar .dropdown ul {
@@ -332,6 +383,27 @@ h6 {
 .navbar-mobile .getstarted:focus {
   margin: 15px;
 }
+
+
+/* 參考
+#hero .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+#hero .btn-get-started:hover {
+  background: #3498db;
+  color: #fff;
+}
+*/
 
 .navbar-mobile .dropdown ul {
   position: static;
@@ -700,6 +772,12 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services {
+  background-image: url(https://hololive.hololivepro.com/wp-content/themes/hololive/images/bg_red.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .services .icon-box {
   padding: 30px;
   position: relative;
@@ -885,6 +963,15 @@ section {
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
+
+/*
+.testimonials {
+  background-image: url(https://hololive.hololivepro.com/wp-content/themes/hololive/images/bg_blue.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+*/
+
 .testimonials .testimonial-wrap {
   padding-left: 50px;
 }
@@ -949,22 +1036,38 @@ section {
   margin: 15px auto 15px auto;
 }
 
+.testimonials .testimonial-item .extra-image {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.testimonials .testimonial-item .extra-image img {
+  width: 100px; /* 調整圖片大小，根據需要進行修改 */
+  height: 100px;
+  border-radius: 80%; /* 可選：設置圖片為圓形 */
+}
+
+
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #3498db;
+/* 新增的箭頭 */
+
+.testimonials .swiper-pagination .swiper-button-next {
+  right: 10px;
+  left: auto;
 }
 
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #3498db;
+.testimonials .swiper-pagination .swiper-button-prev {
+  left: 10px;
+  right: auto;
 }
+
+/* 新增的箭頭 */
 
 @media (max-width: 767px) {
   .testimonials .testimonial-wrap {
@@ -1035,7 +1138,7 @@ section {
 
 .portfolio .portfolio-wrap::before {
   content: "";
-  background: rgba(34, 34, 34, 0.6);
+  background: rgba(34, 34, 34, 0.3);
   position: absolute;
   left: 0;
   right: 0;
@@ -1049,6 +1152,12 @@ section {
 .portfolio .portfolio-wrap img {
   transition: all ease-in-out 0.3s;
 }
+
+/*
+.portfolio .portfolio-wrap .img-fluid {
+  margin: 0 auto;
+}
+*/
 
 .portfolio .portfolio-wrap .portfolio-info {
   opacity: 0;
@@ -1073,7 +1182,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -1265,6 +1374,158 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Music
+--------------------------------------------------------------*/
+.music {
+  background-image: url(https://hololive.hololivepro.com/wp-content/themes/hololive/images/bg_blue.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.music .music-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.music .music-item {
+  width: 100%;
+}
+
+.music .music-wrap {
+  position: relative;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.music .music-thumbnail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.music .music-details h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+}
+
+.music .music-details p {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.music .music-details .btn {
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .music .music-content {
+    justify-content: flex-start;
+  }
+
+  .music .music-item {
+    width: 100%;
+  }
+}
+
+.music-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.music-item:hover .music-thumbnail img {
+  transform: scale(1.15);
+}
+
+.music-item {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.music-thumbnail img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Video
+--------------------------------------------------------------*/
+.video {
+  background-image: url(https://hololive.hololivepro.com/wp-content/themes/hololive/images/bg_green.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.video .video-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.video .video-item {
+  width: 100%;
+}
+
+.video .video-wrap {
+  position: relative;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.video .video-thumbnail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video .video-details h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+}
+
+.video .video-details p {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.video .video-details .btn {
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .video .video-content {
+    justify-content: flex-start;
+  }
+
+  .video .video-item {
+    width: 100%;
+  }
+}
+
+.video-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.video-item:hover .video-thumbnail img {
+  transform: scale(1.15);
+}
+
+.video-item {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.video-thumbnail img {
+  transition: transform 0.3s ease-in-out;
+}
+
+/*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
 .pricing .box {
@@ -1400,6 +1661,10 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact .contact-about {
+  text-align: center;
+}
+
 .contact .contact-about h3 {
   font-size: 28px;
   margin: 0 0 10px 0;

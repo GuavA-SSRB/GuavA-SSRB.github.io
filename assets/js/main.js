@@ -162,6 +162,15 @@
   /**
    * Testimonials slider
    */
+
+  var testimonialsSlider = new Swiper('.testimonials-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+/*
   new Swiper('.testimonials-slider', {
     speed: 600,
     loop: true,
@@ -187,6 +196,7 @@
       }
     }
   });
+*/
 
   /**
    * Porfolio isotope and filter
@@ -259,5 +269,51 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+
+  /**
+   * BGM corner 
+   */
+  window.addEventListener('DOMContentLoaded', function() {
+    var dialogOverlay = document.getElementById('dialog-overlay');
+    var confirmButton = document.getElementById('confirm-button');
+    var cancelButton = document.getElementById('cancel-button');
+
+    confirmButton.addEventListener('click', function() {
+      // 啟用背景音樂的相關邏輯
+      dialogOverlay.style.display = 'none';
+
+      var audio = document.querySelector('#background-audio');  // 選取 <audio> 元素
+      audio.volume = 0.1;  // 設定音量為 0.1（10%）
+      audio.play();  // 播放音樂
+    });
+
+    cancelButton.addEventListener('click', function() {
+      // 不啟用背景音樂的相關邏輯
+      dialogOverlay.style.display = 'none';
+    });
+  });
+
+/*
+  // 以下為監聽iframe暫停BGM(算了)
+  var youtubeVideo = document.getElementById('youtube-video');
+  var backgroundAudio = document.getElementById('background-audio');
+  var existingDialogOverlay = document.getElementById('dialog-overlay-2');
+  var playButton = document.getElementById('play-button');
+  var pauseButton = document.getElementById('pause-button');
+
+  youtubeVideo.addEventListener('click', function() {
+    existingDialogOverlay.style.display = 'block'; // 顯示現有對話框
+  });
+
+  playButton.addEventListener('click', function() {
+    backgroundAudio.play(); // 播放背景音樂
+    existingDialogOverlay.style.display = 'none'; // 隱藏現有對話框
+  });
+
+  pauseButton.addEventListener('click', function() {
+    backgroundAudio.pause(); // 暫停背景音樂
+    existingDialogOverlay.style.display = 'none'; // 隱藏現有對話框
+  });
+*/
 
 })()
